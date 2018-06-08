@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e26b3478-7bcc-4b0d-956a-10a9dda461a0" name="Default" comment="" />
+    <list default="true" id="e26b3478-7bcc-4b0d-956a-10a9dda461a0" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +21,8 @@
     <SUITE FILE_PATH="coverage/pytorch_seq2seq$main_1.coverage" NAME="main_1 Coverage Results" MODIFIED="1528011124908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytorch_seq2seq$data_helper.coverage" NAME="data_helper Coverage Results" MODIFIED="1527588305342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytorch_seq2seq$models.coverage" NAME="models Coverage Results" MODIFIED="1527677761133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pytorch_seq2seq_final$main.coverage" NAME="main Coverage Results" MODIFIED="1528427676380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pytorch_seq2seq_final$data_helper.coverage" NAME="data_helper Coverage Results" MODIFIED="1528427402820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -34,8 +43,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="-7542">
+              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
               <folding>
                 <element signature="e#276#289#0" expanded="true" />
               </folding>
@@ -46,8 +55,13 @@
       <file leaf-file-name="data_helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="200" column="28" lean-forward="true" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+            <state relative-caret-position="438">
+              <caret line="308" column="41" lean-forward="true" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
+              <folding>
+                <element signature="e#264#276#0" expanded="true" />
+                <element signature="e#2358#3316#0" />
+                <element signature="e#7732#7839#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,8 +69,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="161" column="40" lean-forward="true" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
+            <state relative-caret-position="-3685">
+              <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="11" />
               <folding>
                 <element signature="e#229#260#0" expanded="true" />
                 <element signature="e#504#681#1" />
@@ -65,20 +79,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-816">
-              <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+            <state relative-caret-position="628">
+              <caret line="109" column="36" lean-forward="true" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+              <folding>
+                <element signature="e#248#271#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="eval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="422">
+              <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+              <folding>
+                <element signature="e#283#308#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +125,12 @@
       <find>va</find>
       <find>cuda</find>
       <find>data_size</find>
+      <find>pi</find>
+      <find>SOS</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -120,9 +145,9 @@
         <option value="$PROJECT_DIR$/main_1.py" />
         <option value="$PROJECT_DIR$/inference.py" />
         <option value="$PROJECT_DIR$/data/test_cp" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/data_helper.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/eval.py" />
       </list>
     </option>
@@ -136,11 +161,12 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -151,8 +177,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="pytorch_seq2seq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pytorch_seq2seq" type="462c0819:PsiDirectoryNode" />
+              <item name="pytorch_seq2seq_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pytorch_seq2seq_final" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pytorch_seq2seq_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pytorch_seq2seq_final" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,9 +308,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.data_helper" />
         <item itemvalue="Python.main_1" />
         <item itemvalue="Python.models" />
-        <item itemvalue="Python.data_helper" />
       </list>
     </recent_temporary>
   </component>
@@ -297,23 +328,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.17775229" side_tool="true" weight="0.28400955" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.17775229" side_tool="true" weight="0.28347406" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.8222477" weight="0.26176116" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3522316" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11056511" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3305187" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.8222477" weight="0.2907117" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293124" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14250614" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32985258" />
       <window_info anchor="right" id="SciView" order="3" weight="0.114250615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -335,13 +366,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4978">
@@ -370,69 +394,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/modules/sparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="194" column="6" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../xuexi/2018/NER/zh-NER-TF-master/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="93" selection-start-line="93" selection-end-line="94" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../xuexi/2018/NER/zh-NER-TF-master/NER/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="167" column="6" selection-start-line="167" selection-start-column="6" selection-end-line="167" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/modules/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="336" column="8" selection-start-line="336" selection-start-column="8" selection-end-line="336" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/autograd/variable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="446" column="21" lean-forward="true" selection-start-line="446" selection-start-column="21" selection-end-line="446" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="467" column="60" lean-forward="true" selection-start-line="467" selection-start-column="60" selection-end-line="467" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/utils/clip_grad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/modules/sparse.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../2018/NER/zh-NER-TF-master/data.py" />
+    <entry file="file://$PROJECT_DIR$/../../2018/NER/zh-NER-TF-master/NER/data.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/modules/rnn.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/autograd/_functions/pointwise.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/autograd/variable.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/py3Env/lib/python3.6/site-packages/torch/nn/functional.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/utils/clip_grad.py" />
     <entry file="file://$PROJECT_DIR$/data/en2cn">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -440,27 +410,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/cuda/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/_functions/thnn/sparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/modules/sparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="991">
-          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/cuda/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/_functions/thnn/sparse.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/modules/sparse.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/1908239782/torch/_C/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-29604">
@@ -482,102 +434,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/variable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="155" column="27" lean-forward="true" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/_functions/blas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="55" column="58" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/seq2seq_translation_tutorial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="484" column="25" lean-forward="true" selection-start-line="484" selection-start-column="25" selection-end-line="484" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/en2cn/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/en2cn/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/model_Balh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="100" column="48" lean-forward="true" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/en2cn/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/en2cn/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1616">
-          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/modules/loss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="474" column="8" selection-start-line="474" selection-start-column="8" selection-end-line="474" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/variable.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/function.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/_functions/blas.py" />
+    <entry file="file://$PROJECT_DIR$/example/seq2seq_translation_tutorial.py" />
+    <entry file="file://$PROJECT_DIR$/example/en2cn/config.py" />
+    <entry file="file://$PROJECT_DIR$/example/en2cn/train.py" />
+    <entry file="file://$PROJECT_DIR$/example/utils.py" />
+    <entry file="file://$PROJECT_DIR$/example/model_Balh.py" />
+    <entry file="file://$PROJECT_DIR$/example/en2cn/main.py" />
+    <entry file="file://$PROJECT_DIR$/example/en2cn/model.py" />
+    <entry file="file://$PROJECT_DIR$/example/train.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/modules/loss.py" />
     <entry file="file://$PROJECT_DIR$/main1.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/1908239782/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,46 +455,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/_functions/thnn/auto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="218" column="75" lean-forward="true" selection-start-line="218" selection-start-column="75" selection-end-line="218" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="745" column="34" selection-start-line="745" selection-start-column="34" selection-end-line="745" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/_functions/thnn/auto.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/nn/functional.py" />
     <entry file="file://$PROJECT_DIR$/main_1.py" />
-    <entry file="file://$PROJECT_DIR$/../../../work/tmp/2018_2_tmp_py3/DataHelpUtils-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/genericpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../work/tmp/2018_2_tmp_py3/DataHelpUtils-1.py" />
+    <entry file="file://$PROJECT_DIR$/../../../anaconda3/envs/pytorch_0.2/lib/python3.6/genericpath.py" />
     <entry file="file://$PROJECT_DIR$/data/test_cp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -636,27 +474,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_helper.py">
+    <entry file="file://$PROJECT_DIR$/inference.py" />
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="200" column="28" lean-forward="true" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+        <state relative-caret-position="304">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/../../../../anaconda3/envs/pytorch_0.2/lib/python3.6/site-packages/torch/autograd/variable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="344">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="79" column="36" selection-start-line="79" selection-end-line="79" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="109" column="36" lean-forward="true" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
           <folding>
-            <element signature="e#276#289#0" expanded="true" />
+            <element signature="e#248#271#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="161" column="40" lean-forward="true" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
+        <state relative-caret-position="-3685">
+          <caret line="16" selection-start-line="16" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="e#229#260#0" expanded="true" />
             <element signature="e#504#681#1" />
@@ -664,24 +517,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inference.py">
+    <entry file="file://$PROJECT_DIR$/data_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="438">
+          <caret line="308" column="41" lean-forward="true" selection-start-line="308" selection-start-column="41" selection-end-line="308" selection-end-column="41" />
+          <folding>
+            <element signature="e#264#276#0" expanded="true" />
+            <element signature="e#2358#3316#0" />
+            <element signature="e#7732#7839#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7542">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+          <folding>
+            <element signature="e#276#289#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        <state relative-caret-position="422">
+          <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+          <folding>
+            <element signature="e#283#308#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

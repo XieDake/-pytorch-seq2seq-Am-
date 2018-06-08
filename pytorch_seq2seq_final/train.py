@@ -160,7 +160,7 @@ def train_one_epoch_0601(epoch_num,train_batch_iter,optimizer_en,optimizer_de,cl
         # 每50步print损失loss信息！
         if (step % 20== 0 and step != 0):
             total_loss = total_loss / 20
-            print("[epoch:%d][step:%d][loss:%5.2f][pp:%5.2f]" % (epoch_num, step, total_loss, math.exp(total_loss)))
+            print("[epoch:%d][step:%d][loss:%f][pp:%f]" % (epoch_num, step, total_loss, math.exp(total_loss)))
             total_loss = 0
 
 def validation_after_one_epoch_0601(validation_batch_iter,encoder,decoder,data_size):
@@ -213,3 +213,42 @@ def validation_after_one_epoch_0601(validation_batch_iter,encoder,decoder,data_s
         total_loss += loss.data[0]
     #
     return total_loss/data_size
+#===============================================================
+#===============================================================
+#Prediction for inference!
+def predict_for_inference(sent_id,encoder,decoder):
+    '''
+    进行一次预测，输出sentence！
+    '''
+    #TODO:Evaluation模式：不需要bp！功能还需研究！
+    encoder.eval()
+    decoder.eval()
+    use_cuda=torch.cuda.is_available()
+    #
+    source_batch_pad = sent_id  # [B=1,seq_len]
+    # encoder
+    # hidden:?*B*H——>(num_layers * num_directions, batch, hidden_size)
+    # encoder_outPuts:T*B*H——>(seq_len, batch, hidden_size * num_directions)
+    encoder_outPuts, hidden = encoder(source_batch_pad)  # hidden=None
+    # decoder:注意Batch形式每一次input的维度[B]
+    # 初始化decoder的hidden和第一次input！
+    hidden = hidden[:encoder.num_layers]
+    outPuts=[]#保存decoder预测结果！
+    outPut =[SOS_token]   # SOS作为decoder的第一个输入！
+    #
+    while(True):
+        # outPut:B*vocab_size
+        outPut, hidden, _ = decoder(outPut, hidden, encoder_outPuts)
+        # Prepare for next time step!
+        top1 = outPut.data.max(1)[1]  # 取index！
+        outPuts.append(top1)
+        if (use_cuda):
+            outPut = Variable(top1).cuda()
+        else:
+            outPut = Variable(top1)
+        #判断是否结束！
+        if(top1==EOS_token):
+            #eos结束标志位也保存！
+            break
+    #输出预测的wd的index！
+    return outPuts

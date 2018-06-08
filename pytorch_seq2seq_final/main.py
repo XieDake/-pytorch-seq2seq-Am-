@@ -26,16 +26,16 @@ def parse_arguments():
     parse.add_argument('--decoder_embed_dim', type=int, default=256,help='Embed dim of decoder!')
     parse.add_argument('--decoder_num_layers', type=int, default=1,help='Num layers of decoder!')
     parse.add_argument('--decoder_droupOut_p',type=float,default=0.5,help='DroupOut prob of decoder!')
-    parse.add_argument('--decoder_method',type=str,default='general',help='Align methods of AM in decoder!')
+    parse.add_argument('--decoder_method',type=str,default='concat',help='Align methods of AM in decoder!')
     #
-    parse.add_argument('--epochs', type=int, default=10,help='number of epochs for train')
-    parse.add_argument('--batch_size', type=int, default=20,help='number of epochs for train')
-    parse.add_argument('--lr', type=float, default=0.0001,help='initial learning rate')
+    parse.add_argument('--epochs', type=int, default=2,help='number of epochs for train')
+    parse.add_argument('--batch_size', type=int, default=64,help='number of epochs for train')
+    parse.add_argument('--lr', type=float, default=0.001,help='initial learning rate')
     parse.add_argument('--grad_clip', type=float, default=5.0,help='Gradient max clip!')
     parse.add_argument('--teacher_forcing_ratio',type=float,default=0.5,help='Teacher forcing ratio!')
     #
-    parse.add_argument('--Base_path', type=str, default='/Users/xieqiqi/Documents/pyenv/xuexi/pytorch_seq2seq/data/', help='Base path!')
-    parse.add_argument('--Save_path', type=str, default='/Users/xieqiqi/Documents/pyenv/xuexi/pytorch_seq2seq/data/save_0/',
+    parse.add_argument('--Base_path', type=str, default='/Users/xieqiqi/Documents/pyenv/xuexi/pytorch-seq2seq-Am/pytorch_seq2seq_final/data/', help='Base path!')
+    parse.add_argument('--Save_path', type=str, default='/Users/xieqiqi/Documents/pyenv/xuexi/pytorch-seq2seq-Am/pytorch_seq2seq_final/data/save_0/',
                        help='Save path!')
     #
     parse.add_argument('--mode',type=str,default='train',help='Type of mode!')
@@ -43,15 +43,12 @@ def parse_arguments():
     return parse.parse_args()
 #
 args=parse_arguments()
-print("==================Initial Parameters:==========================")
+print("==================Base Information:============================")
 print("mode:",args.mode)
 print("batch_size:",args.batch_size)
 print("lr",args.lr)
 print("grad_clip",args.grad_clip)
 print("teacher_forcing_ratio",args.teacher_forcing_ratio)
-
-
-
 print("===============================================================")
 print("Path setting...")
 train_data_fileName=os.path.join(args.Base_path,'train')
@@ -92,6 +89,7 @@ print("===============================================================")
 if(args.mode=='train'):
     print("Training....")
     best_val_loss = None
+    #TODO:Early stop 机制，还木有加上！
     for epoch in range(config.epoches):
         #注意：因为使用的是generator所以，最好每一个epoch都重新产生一次！
         train_data_iter = batch_yeild(sentPairs=train_pairs, batch_size=args.batch_size)
@@ -103,7 +101,7 @@ if(args.mode=='train'):
         #每一次epoch结束，在test集进行一次validation！
         val_loss=validation_after_one_epoch_0601(validation_batch_iter=test_data_iter,encoder=encoder,decoder=decoder,
                                                  data_size=test_sentence_pairs_size)
-        print("Training on Epoch:%d finished! Val_loss=:%5.3f | Val_pp:%5.2fS"% (epoch, val_loss, math.exp(val_loss)))
+        print("Training on Epoch:%d finished! Val_loss=:%f | Val_pp:%fS"% (epoch, val_loss, math.exp(val_loss)))
         #save_model:保存最优测试结果的epoch的Model！
         if not best_val_loss or val_loss < best_val_loss:
             print("Time for saving model...")
@@ -111,6 +109,3 @@ if(args.mode=='train'):
             torch.save(decoder.state_dict(), os.path.join(save_path, 'decoder_%d.pt' % (epoch)))
             best_val_loss = val_loss
     print("Training end....")
-
-
-

@@ -11,7 +11,7 @@ introduction:
 import torch
 import numpy as np
 from torch.autograd import Variable
-import pickle,random
+import pickle,random,re
 ################################################################
    ##################Tool of base class!################
 ################################################################
@@ -30,7 +30,7 @@ class Lang:
         self.n_word=3#wordNum指针!永远指向下一个word的pos！
 
     def seg_sentence(self,sentence):
-        return sentence.split(' ')
+        return self.filter(sentence).strip().split(' ')
 
     def words_index_words(self,sentence):
         words=self.seg_sentence(sentence)
@@ -53,6 +53,13 @@ class Lang:
         else:
             #old wd！
             self.wordCount[word]+=1
+    def filter(self,sent):
+        '''
+        大小写转小写，过滤掉非中文和非英文的东西！
+        '''
+        sent_process = re.sub("[\s+\.\!\/_,$%^*(+\"\']+|[+——！，。？、~@#￥%……&*（）]+"," ", sent.lower())
+        #
+        return sent_process
 
     def trim(self):
         '''
@@ -123,14 +130,14 @@ def sent2id(dataFileName,reverse=False,mode='train'):
         source_sents2id = []
         source_data_helper = Lang(min_count=1)
         for sentPair in sentPairs:
-            source_data_helper.words_index_words(sentPair[0])
+            source_data_helper.words_index_words(sentPair[0].lower())
 
         source_data_helper.trim()
         source_word2index = source_data_helper.word2index
         source_index2word = source_data_helper.index2word
-        with open("save/source_W2Id", 'wb') as fw:
+        with open("data/save/source_W2Id", 'wb') as fw:
             pickle.dump(source_word2index, fw)
-        with open("save/source_id2Wd", 'wb') as fw:
+        with open("data/save/source_id2Wd", 'wb') as fw:
             pickle.dump(source_index2word, fw)
         # source每一句话最后一个统一添加EOS！
         for sentPair in sentPairs:
@@ -149,14 +156,14 @@ def sent2id(dataFileName,reverse=False,mode='train'):
         target_sents2id = []
         target_data_helper = Lang(min_count=1)
         for sentPair in sentPairs:
-            target_data_helper.words_index_words(sentPair[1])
+            target_data_helper.words_index_words(sentPair[1].lower())
 
         target_data_helper.trim()
         target_word2index = target_data_helper.word2index
         target_index2word = target_data_helper.index2word
-        with open("save/target_W2Id", 'wb') as fw:
+        with open("data/save/target_W2Id", 'wb') as fw:
             pickle.dump(target_word2index, fw)
-        with open("save/target_id2Wd", 'wb') as fw:
+        with open("data/save/target_id2Wd", 'wb') as fw:
             pickle.dump(target_index2word, fw)
         # target的开始第一个统一SOS，最后一个统一添加EOS！
         for sentPair in sentPairs:
@@ -182,7 +189,7 @@ def sent2id(dataFileName,reverse=False,mode='train'):
         print("Source data processing....")
         source_sents2id = []
         print("Loading source dict....")
-        with open("save/source_W2Id", "rb") as fr:
+        with open("data/save/source_W2Id", "rb") as fr:
             source_word2index = pickle.load(fr)
         # source每一句话最后一个统一添加EOS！
         for sentPair in sentPairs:
@@ -200,7 +207,7 @@ def sent2id(dataFileName,reverse=False,mode='train'):
         print("Target data processing....")
         target_sents2id = []
         print("Loading target dict....")
-        with open("save/target_W2Id", "rb") as fr:
+        with open("data/save/target_W2Id", "rb") as fr:
             target_word2index = pickle.load(fr)
         # target的开始第一个统一SOS，最后一个统一添加EOS！
         for sentPair in sentPairs:
@@ -277,3 +284,37 @@ def batch_yeild(sentPairs,batch_size):
             source_batch_pad = Variable(torch.from_numpy(np.array(source_batch_pad)))
             target_batch_pad = Variable(torch.from_numpy(np.array(target_batch_pad)))
         yield source_batch_pad, source_lengths, target_batch_pad, target_lengths
+
+#data_helper for inference!
+def filter(sent):
+    '''
+    大小写转小写，过滤掉非中文和非英文的东西！
+    '''
+    sent_process = re.sub("[\s+\.\!\/_,$%^*(+\"\']+|[+——！，。？、~@#￥%……&*（）]+"," ", sent.lower()).strip().split(' ')
+    #
+    return sent_process
+
+def sent2id_for_inference(input_sent):
+    '''
+    Inference input sentence process！
+    '''
+    #source process!
+    print("Source data processing....")
+    s_sent2id = []
+    print("Loading source dict....")
+    with open("data/save/source_W2Id", "rb") as fr:
+        source_word2index = pickle.load(fr)
+    #source每一句话最后一个统一添加EOS！
+    for wd in filter(sent=input_sent):
+        if (wd not in source_word2index):
+            s_sent2id.append(source_word2index["UNK"])
+        else:
+            s_sent2id.append(source_word2index[wd])
+    #source每一句话最后一个统一添加EOS！
+    s_sent2id.append(EOS_token)
+    if(torch.cuda.is_available()):
+        out = Variable(torch.from_numpy(np.array(s_sent2id))).cuda().unsqueeze(0)
+    else:
+        out = Variable(torch.from_numpy(np.array(s_sent2id))).unsqueeze(0)
+    #
+    return out
